@@ -28,6 +28,7 @@
 ![screenshot](/Pictures/Screenshots/scrot1.png)
 
 + **Firefox**, **Vim**
+
 ![screenshot](/Pictures/Screenshots/scrot2.png)
 
 + **Ncmpcpp**
