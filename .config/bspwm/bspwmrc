@@ -1,0 +1,21 @@
+#! /bin/sh
+
+$HOME/.config/polybar/launch.sh &
+
+bspc monitor -d term web code files media extra 
+
+bspc config focused_border_color "#434E5B"
+bspc config normal_border_color "#2A303C"
+bspc config border_width 0
+bspc config window_gap  12
+bspc config focus_follows_pointer true
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      false
+bspc config single_monocle       true
+
+bspc rule -a Firefox desktop='^2' follow=on
+bspc rule -a mpv desktop='^5' state=fullscreen follow=on
+bspc rule -a feh state=floating follow=on
+bspc rule -a Lxappearance state=floating follow=on

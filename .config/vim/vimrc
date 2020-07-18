@@ -1,0 +1,71 @@
+highlight LineNr ctermfg=blue
+syntax on
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+set wildmode=longest,list,full
+set wrap
+set autoindent
+set expandtab
+set tabstop=4
+set softtabstop=4
+set expandtab
+set wildmenu
+set showmatch
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set laststatus=2
+set showmode!
+set noswapfile
+set t_Co=16
+set nobackup
+set undofile
+set splitbelow splitright
+set number
+
+hi User1 ctermfg=black ctermbg=green
+hi User2 ctermfg=black ctermbg=blue
+hi User3 ctermfg=black ctermbg=yellow
+hi User4 ctermfg=black ctermbg=magenta
+hi User5 ctermfg=black ctermbg=cyan
+hi User6 ctermfg=none ctermbg=black
+
+let g:currentmode={
+       \ 'n'  : 'NORMAL ',
+       \ 'v'  : 'VISUAL ',
+       \ 'V'  : 'V·Line ',
+       \ '' : 'V·Block ',
+       \ 'i'  : 'INSERT ',
+       \ 'R'  : 'R ',
+       \ 'Rv' : 'V·Replace ',
+       \ 'c'  : 'Command ',
+       \}
+
+set statusline=
+set statusline+=%2*\ %2*%{toupper(g:currentmode[mode()])}
+set statusline+=%6*\ %f
+set statusline+=\ %6*\ %{&modified?'[+]':''}
+set statusline+=\ %=%6*\ %Y
+set statusline+=\ %3*\ %v:%l\/%L
+set statusline+=\ 
+
+let mapleader = " "
+
+inoremap hh <esc>
+nnoremap <leader>u :UndotreeToggle<CR>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+set undodir=$XDG_DATA_HOME/vim/undo
+set directory=$XDG_DATA_HOME/vim/swap
+set backupdir=$XDG_DATA_HOME/vim/backup
+set viewdir=$XDG_DATA_HOME/vim/view
+set viminfo+=n$XDG_DATA_HOME/vim/viminfo
+set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
+
+call plug#begin('~/.local/share/vim/plugged')
+
+call plug#end()
