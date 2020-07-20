@@ -1,44 +1,51 @@
 #! /bin/sh
 # wm independent hotkeys
 #
-
 # terminal emulator
 super + Return
 	urxvt
 
 # program launcher
 super + @space
-        dmenu_run -fn "Neep" -nb "#2a303c" -nf "#aab9cc" -sb "#50adcc" -sf "#2a303c"
+    run_dmenu        
 
 # apps
 super + shift + {b,f,m,v,t}
-        {firefox-bin,urxvt -e ranger,urxvt -e ncmpcpp,urxvt -e vim,urxvt -e rtorrent}
+    {firefox-bin,urxvt -e ranger,urxvt -e ncmpcpp,urxvt -e vim,urxvt -e rtorrent}
 
 # scripts
 super + shift + r
-        redshift_toggle
+    redshift_toggle
+super + F1
+    faint        
+super + F2
+    faint_light
+super + F3
+    iris
+super + F4
+    gruvbox && notify-send "gruvbox"
 
 # brightness keybindings
 XF86MonBrightness{Up,Down}
-        xbacklight {-inc,-dec} 5
+    xbacklight {-inc,-dec} 5
 
 # media keys
 XF86Audio{Next,Prev,Play,Stop}
-        mpc {next,prev,toggle,stop}
+    mpc {next,prev,toggle,stop}
 
 # volume
 XF86AudioRaiseVolume
-        volume_increase
+    volume_increase
 XF86AudioLowerVolume
-        volume_decrease
+    volume_decrease
 XF86AudioMute
-         amixer -q sset Master toggle && notify-send "Muted" 
+    mixer -q sset Master toggle && notify-send "Muted" 
 
 # screenshot keybindings
 Print
-        scrot '/home/raj/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png' && notify-send "Screenshot captured"
+    scrot '/home/raj/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png' && notify-send "Screenshot captured"
 ctrl + Print
-        scrot -C
+    scrot -C
 
 # make sxhkd reload its configuration files:
 super + Escape

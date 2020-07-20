@@ -1,6 +1,6 @@
 ! Colorscheme
 
-#include "/home/raj/.config/colorschemes/iris"
+#include </home/raj/.config/colorschemes/gruvbox>
 
 ! URxvt
 

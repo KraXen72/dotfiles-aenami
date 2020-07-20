@@ -7,7 +7,6 @@ xsetroot -cursor_name left_ptr
 xbacklight -set 20%
 redshift &
 ~/.fehbg
-sxhkd &
 mpd &
 picom &
 exec bspwm 

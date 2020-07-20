@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#change colorscheme in xresources
+sed -i 's/include.*/include <\/home\/raj\/.config\/colorschemes\/iris>/' ~/.config/X11/xresources
+
+#reload xresources
+xrdb $HOME ~/.config/X11/xresources
+
+#change wall using feh
+feh --bg-fill ~/Pictures/iris.jpg && notify-send "colorscheme changed" "iris"
+
+#colors
+export background=$(xrdb ~/.config/X11/xresources -query all | grep background | awk '{print $2   }')
+export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | awk '{print $2   }')
+
+#change dunst colors
+sed -i "s|background.*|background = \"$background\"|g" ~/.config/dunst/dunstrc
+sed -i "s|foreground.*|foreground = \"$foreground\"|g" ~/.config/dunst/dunstrc
+
+#restart bspwm
+bspc wm -r &
+
+#close urxvt
+killall urxvt
