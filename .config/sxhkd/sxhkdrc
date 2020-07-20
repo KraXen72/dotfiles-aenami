@@ -23,7 +23,7 @@ super + F2
 super + F3
     iris
 super + F4
-    gruvbox && notify-send "gruvbox"
+    gruvbox
 
 # brightness keybindings
 XF86MonBrightness{Up,Down}
@@ -39,7 +39,7 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
     volume_decrease
 XF86AudioMute
-    mixer -q sset Master toggle && notify-send "Muted" 
+    amixer -q sset Master toggle && notify-send "Muted" 
 
 # screenshot keybindings
 Print
