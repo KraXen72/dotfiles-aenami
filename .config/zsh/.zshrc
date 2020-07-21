@@ -15,3 +15,4 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.config/zsh/aliasrc
 
 export PATH=$PATH:$HOME/.config/scripts
+fetch

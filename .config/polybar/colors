@@ -10,4 +10,3 @@ color4 = ${xrdb:color4}
 color5 = ${xrdb:color5}
 color6 = ${xrdb:color6}
 color8 = ${xrdb:color8}
-

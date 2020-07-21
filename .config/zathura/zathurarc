@@ -22,4 +22,3 @@ set notification-warning-fg #2a303c"
 set completion-highlight-bg "#CC7670" 
 set completion-highlight-fg "#2a303c" 
 set completion-fg "#2a303c" 
-

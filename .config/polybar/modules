@@ -91,7 +91,7 @@ accumulate-stats = true
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
 format-connected-padding = 1
-format-connected-foreground = ${colors.color4}
+format-connected-foreground = ${colors.color5}
 label-connected-foreground = ${colors.foreground}
 
 ramp-signal-0 = 

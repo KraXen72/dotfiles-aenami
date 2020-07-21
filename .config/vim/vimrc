@@ -4,7 +4,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set wildmode=longest,list,full
 set wrap
-set autoindent
+set smartindent
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -47,7 +47,7 @@ set statusline+=%2*\ %2*%{toupper(g:currentmode[mode()])}
 set statusline+=%6*\ %f
 set statusline+=\ %6*\ %{&modified?'[+]':''}
 set statusline+=\ %=%6*\ %Y
-set statusline+=\ %3*\ %v:%l\/%L
+set statusline+=\ %1*\ %v:%l\/%L
 set statusline+=\ 
 
 let mapleader = " "

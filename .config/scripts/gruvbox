@@ -14,11 +14,19 @@ export background=$(xrdb ~/.config/X11/xresources -query all | grep background |
 export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | awk '{print $2}')
 
 #change dunst colors
+killall dunst
 sed -i "s|background.*|background = \"$background\"|g" ~/.config/dunst/dunstrc
 sed -i "s|foreground.*|foreground = \"$foreground\"|g" ~/.config/dunst/dunstrc
 
+#dunst corners
+sed -i "s|corner_radius.*|corner_radius = 4|g" ~/.config/dunst/dunstrc
+
+#remove border
+sed -i "s|bspc config border_width.*|bspc config border_width 0 |g" ~/.config/bspwm/bspwmrc
+
+#compositor
+killall picom
+picom --config ~/.config/picom/picom.conf &
+
 #restart bspwm
 bspc wm -r
-
-#close urxvt
-killall urxvt

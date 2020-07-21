@@ -34,6 +34,11 @@ tray-offset-y = 0
 ; Pad the sides of each tray icon
 tray-padding = 1
 
+label-monocle = M 
+label-tiled = T
+label-floating = F
+label-pseudotiled = P
+
 [settings]
 label-focused-underline= ${colors.background}
 throttle-output = 5

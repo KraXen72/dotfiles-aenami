@@ -5,8 +5,7 @@ xset +fp /home/raj/.local/share/fonts
 xset fp rehash
 xsetroot -cursor_name left_ptr
 xbacklight -set 20%
-redshift &
 ~/.fehbg
 mpd &
-picom &
+sxhkd &
 exec bspwm 
