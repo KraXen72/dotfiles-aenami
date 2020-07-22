@@ -8,7 +8,7 @@
 + **SHELL**             : Zsh
 + **EDITOR**            : Vim
 + **MUSIC PLAYER**      : Mpd + Ncmpcpp
-+ **BROWSER**           : Firefox
++ **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
 + **FILE MANAGER**      : Ranger
 + **NOTIFICATION**      : Dunst
 + **COMPOSITOR**        : Picom-ibhagwan
@@ -23,18 +23,19 @@
 
 ## <p align="center">Preview</p>
 
-+ **Fetch**, **Htop**, **Colorblocks**
++ **Colorscheme:** **Faint**
 
 ![screenshot](/Pictures/Screenshots/scrot1.png)
 
-+ **Firefox**, **Vim**
++ **Firefox**
 
 ![screenshot](/Pictures/Screenshots/scrot2.png)
 
-+ **Ncmpcpp**
++ **Colorscheme:** **Faint-Light**
 
 ![screenshot](/Pictures/Screenshots/scrot3.png)
 
-+ **Zathura**, **Neomutt**, **Newsboat**
++ **Colorscheme:** **Iris**
 
 ![screenshot](/Pictures/Screenshots/scrot4.png)
+
