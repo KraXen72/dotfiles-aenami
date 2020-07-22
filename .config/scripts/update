@@ -43,4 +43,4 @@ portage_sync
 new_use
 update_system
 depclean
-echo "System Updated"
+notify-send "System Updated"

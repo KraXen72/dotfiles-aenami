@@ -1,32 +1,46 @@
 #!/bin/bash
 
-#change colorscheme in xresources
-sed -i 's/include.*/include <\/home\/raj\/.config\/colorschemes\/iris>/' ~/.config/X11/xresources
+function xresources_colors
+{
+        sed -i 's/include.*/include <\/home\/raj\/.config\/colorschemes\/iris>/' ~/.config/X11/xresources
+        xrdb $HOME ~/.config/X11/xresources
+}
 
-#reload xresources
-xrdb $HOME ~/.config/X11/xresources
+function wall
+{
+        feh --bg-fill ~/Pictures/iris.jpg
+}
 
-#change wall using feh
-feh --bg-fill ~/Pictures/iris.jpg
+function get_colors
+{
+        export background=$(xrdb ~/.config/X11/xresources -query all | grep background | awk '{print $2}')
+        export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | awk '{print $2}')
+}
 
-#colors
-export background=$(xrdb ~/.config/X11/xresources -query all | grep background | awk '{print $2}')
-export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | awk '{print $2}')
+function dunst_conf
+{
+        killall dunst
+        sed -i "s|background.*|background = \"$background\"|g" ~/.config/dunst/dunstrc
+        sed -i "s|foreground.*|foreground = \"$foreground\"|g" ~/.config/dunst/dunstrc
+        sed -i "s|corner_radius.*|corner_radius = 4|g" ~/.config/dunst/dunstrc
+        dunst &
+}
 
-#change dunst colors
-killall dunst
-sed -i "s|background.*|background = \"$background\"|g" ~/.config/dunst/dunstrc
-sed -i "s|foreground.*|foreground = \"$foreground\"|g" ~/.config/dunst/dunstrc
+function picom_shadow
+{
+        killall picom
+        sed -i "s|picom.*|picom --config ~/.config/picom/picom.conf \&|g" ~/.config/bspwm/bspwmrc
+}
 
-#dunst corners
-sed -i "s|corner_radius.*|corner_radius = 4|g" ~/.config/dunst/dunstrc
+function bspwmrc
+{
+        sed -i "s|bspc config border_width.*|bspc config border_width 0 |g" ~/.config/bspwm/bspwmrc
+        bspc wm -r
+}
 
-#remove border
-sed -i "s|bspc config border_width.*|bspc config border_width 0 |g" ~/.config/bspwm/bspwmrc
- 
-#compositor
-killall picom
-picom --config ~/.config/picom/picom.conf &
-
-#restart bspwm
-bspc wm -r &
+xresources_colors
+wall
+get_colors
+dunst_conf
+picom_shadow
+bspwmrc
