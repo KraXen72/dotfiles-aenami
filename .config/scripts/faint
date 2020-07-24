@@ -17,20 +17,16 @@ function get_colors
         export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | awk '{print $2}')
 }
 
-function dunst_conf
-{
-        killall dunst
-        sed -i "s|background.*|background = \"$background\"|g" ~/.config/dunst/dunstrc
-        sed -i "s|foreground.*|foreground = \"$foreground\"|g" ~/.config/dunst/dunstrc
-        sed -i "s|corner_radius.*|corner_radius = 0|g" ~/.config/dunst/dunstrc
-        dunst &
-}
-
 function picom_shadow
 {
         killall picom
         sed -i "s|picom.*|picom --config ~/.config/picom/picom_shadow.conf \&|g" ~/.config/bspwm/bspwmrc
 }
+
+function rundunst
+{
+        killall dunst
+        run_dunst &
 
 function bspwmrc
 {
@@ -45,4 +41,5 @@ wall
 get_colors
 dunst_conf
 picom_shadow
+rundunst
 bspwmrc
