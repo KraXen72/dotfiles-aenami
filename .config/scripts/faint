@@ -27,6 +27,7 @@ function rundunst
 {
         killall dunst
         run_dunst &
+}
 
 function bspwmrc
 {
@@ -39,7 +40,6 @@ function bspwmrc
 xresources_colors
 wall
 get_colors
-dunst_conf
 picom_shadow
 rundunst
 bspwmrc
