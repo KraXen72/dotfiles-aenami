@@ -52,7 +52,7 @@ Now open your terminal and type these commands-
 
 ```shell
 mv ~/.config ~/.config-bak
-mkdir -p Projects Pictures/Screenshots/
+mkdir -p .config/ Projects/ Pictures/Screenshots/
 echo 'alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"' >> $HOME/.zshrc
 source ~/.zshrc
 echo "Projects/dotfiles" >> .gitignore
