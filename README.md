@@ -4,7 +4,7 @@
 + **WM**                : Bspwm
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
-+ **TERMINAL**          : Urxvt 
++ **TERMINAL**          : Urxvt
 + **SHELL**             : Zsh
 + **EDITOR**            : Vim
 + **MUSIC PLAYER**      : Mpd + Ncmpcpp
@@ -23,19 +23,18 @@
 
 ## <p align="center">Preview</p>
 
-+ **Colorscheme:** **Faint**
++ **Colorscheme:** **Faint Light**
 
 ![screenshot](/Pictures/Screenshots/scrot1.png)
 
-+ **Firefox**
++ **Colorscheme:** **Faint Light**
 
 ![screenshot](/Pictures/Screenshots/scrot2.png)
 
-+ **Colorscheme:** **Faint-Light**
++ **Firefox**
 
 ![screenshot](/Pictures/Screenshots/scrot3.png)
 
-+ **Colorscheme:** **Iris**
++ **Colorscheme:** **Faint Dark**
 
 ![screenshot](/Pictures/Screenshots/scrot4.png)
-
