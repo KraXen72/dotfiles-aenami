@@ -45,14 +45,14 @@
 ## <p align="center">Installation</p>
 
 You can get this setup on any distro, but you need to install some apps which are required for this setup to work.\
-Make sure you have installed bspwm, sxhkd, polybar, urxvt, feh, zsh, git, font-awesome, dunst. If you want you can look at [details](https://github.com/rajshekhar26/dotfiles/#details) and install other optional apps that I'm using.\
-I'm also using a bitmap font called Neep in my terminal and scientifica in polybar. You can replace them in xresources and polybar config with the fonts that you use or you can get these fonts from [here](https://github.com/Tecate/bitmap-fonts).\
+Make sure you have installed bspwm, sxhkd, polybar, urxvt, feh, zsh, git, font-awesome, dunst. If you want you can look at [details](#details) and install other optional apps that I'm using.\
+I'm also using a bitmap font called Neep in my terminal and scientifica in polybar. You can replace them in xresources and polybar config with the fonts that you use or you can get these fonts from [here](https://github.com/Tecate/bitmap-fonts).
 
 Now open your terminal and type these commands-
 
 ```shell
-cp -r ~/.config ~/.config-bak
-mkdir ~/Projects
+mv ~/.config ~/.config-bak
+mkdir -p Projects Pictures/Screenshots/
 echo 'alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"' >> $HOME/.zshrc
 source ~/.zshrc
 echo "Projects/dotfiles" >> .gitignore
