@@ -9,14 +9,15 @@ set wrap    " wrap lines
 set mouse=a " enable use of the mouse
 set showmode!   " hide current mode
 set showmatch   " highlight matching brackets
-set t_Co=16 " terminal color
+set t_Co=256 " terminal color
+set background=light
 set incsearch " search as characters are entered
 set ignorecase  " case insensitive search
 set smartcase   " case sensitive when uppercase
 set laststatus=2    " Always display the status line
 set noswapfile  " swap files won't be created
 set nobackup    " no backup
-set undofile    " seems necessary without backup
+set undofile
 set autoindent
 set smartindent
 "set cursorline  "highlight current line
@@ -68,7 +69,16 @@ set statusline+=%6*\ %f
 set statusline+=\ %6*\ %{&modified?'[+]':''}
 set statusline+=\ %=%6*\ %Y
 set statusline+=\ %1*\ %v:%l\/%L
-set statusline+=\
+set statusline+=\ "
+
+" auto close
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 " espace using hh
 inoremap hh <esc>
@@ -105,4 +115,7 @@ let NERDTreeShowHidden=1
 call plug#begin('~/.config/vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'mbbill/undotree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 call plug#end()

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function xresources_colors
+function colorscheme
 {
         sed -i 's/include.*/include <\/home\/raj\/.config\/colorschemes\/faint_light>/' ~/.config/X11/xresources
         xrdb $HOME ~/.config/X11/xresources
@@ -8,19 +8,7 @@ function xresources_colors
 
 function wall
 {
-        feh --bg-fill ~/Pictures/faint_light.jpg
-}
-
-function get_colors
-{
-        export background=$(xrdb ~/.config/X11/xresources -query all | grep background | awk '{print $2}')
-        export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | awk '{print $2}')
-}
-
-function picom_shadow
-{
-        killall picom
-        sed -i "s|picom.*|picom --config ~/.config/picom/picom_shadow.conf \&|g" ~/.config/bspwm/bspwmrc
+        feh --bg-center ~/Pictures/faint_light.*
 }
 
 function rundunst
@@ -29,17 +17,7 @@ function rundunst
         run_dunst &
 }
 
-function bspwmrc
-{
-        sed -i "s|bspc config border_width.*|bspc config border_width 2 |g" ~/.config/bspwm/bspwmrc
-        sed -i "s|bspc config normal_border_color.*|bspc config normal_border_color  \"$background\"|g" ~/.config/bspwm/bspwmrc
-        sed -i "s|bspc config focused_border_color.*|bspc config focused_border_color   \"#949EA4\"|g" ~/.config/bspwm/bspwmrc
-        bspc wm -r
-}
-
-xresources_colors
+colorscheme
 wall
-get_colors
-picom_shadow
 rundunst
-bspwmrc
+bspc wm -r

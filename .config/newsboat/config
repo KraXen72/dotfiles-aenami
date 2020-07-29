@@ -4,13 +4,13 @@ confirm-exit no
 notify-always yes
 notify-program notify-send
 
-color background          color15   color0
-color listnormal          color8    color0
-color listfocus           color0    color3
-color listnormal_unread   color15   color0 
-color listfocus_unread    color0    color3
-color info                color0    color5
-color article             color15   color0
+color background        color15   color0
+color listnormal        color8    color0
+color listfocus         color0    color3
+color listnormal_unread color15   color0
+color listfocus_unread  color0    color3
+color info              color0    color5
+color article           color15   color0
 
 bind-key j down
 bind-key k up
@@ -31,7 +31,7 @@ browser firefox-bin
 macro f open-in-browser
 macro y set browser "mpv" ; open-in-browser ; set browser firefox-bin
 
-highlight article "^(Feed|Author|Link):.*$" color4 color0 
+highlight article "^(Feed|Author|Link):.*$" color4 color0
 highlight article "^(Title|Date):.*$" color6 color0 bold
 highlight article "https?://[^ ]+" color2 color0 underline
 highlight article "\\[[0-9]+\\]" color4 color0 bold

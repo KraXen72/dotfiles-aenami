@@ -2,7 +2,6 @@
 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
-
 color1 = ${xrdb:color1}
 color2 = ${xrdb:color2}
 color3 = ${xrdb:color3}

@@ -7,7 +7,7 @@ super + Return
 
 # program launcher
 super + @space
-    run_dmenu        
+    run_dmenu
 
 # apps
 super + shift + {b,f,m,v,t}
@@ -17,13 +17,9 @@ super + shift + {b,f,m,v,t}
 super + shift + r
     redshift_toggle
 super + F1
-    faint        
+    faint
 super + F2
     faint_light
-super + F3
-    iris
-super + F4
-    gruvbox
 
 # brightness keybindings
 XF86MonBrightness{Up,Down}
@@ -38,8 +34,9 @@ XF86AudioRaiseVolume
     volume_increase
 XF86AudioLowerVolume
     volume_decrease
+
 XF86AudioMute
-    amixer -q sset Master toggle && notify-send "Muted" 
+    amixer -q sset Master toggle
 
 # screenshot keybindings
 Print
