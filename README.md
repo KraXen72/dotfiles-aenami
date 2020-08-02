@@ -26,21 +26,25 @@
 
 ## <p align="center">Preview</p>
 
-+ **Colorscheme:** **Faint Light**
++ **Faint Light**
 
-![screenshot](/Pictures/Screenshots/scrot1.png)
+![screenshot](/Pictures/Screenshots/faint_light.png)
 
-+ **Colorscheme:** **Faint Light**
++ **Faint Dark**
 
-![screenshot](/Pictures/Screenshots/scrot2.png)
+![screenshot](/Pictures/Screenshots/faint_dark.png)
 
 + **Firefox**
 
-![screenshot](/Pictures/Screenshots/scrot3.png)
+![screenshot](/Pictures/Screenshots/firefox.png)
 
-+ **Colorscheme:** **Faint Dark**
++ **Blossom Dark**
 
-![screenshot](/Pictures/Screenshots/scrot4.png)
+![screenshot](/Pictures/Screenshots/blossom_dark.png)
+
++ **Blossom Light**
+
+![screenshot](/Pictures/Screenshots/blossom_light.png)
 
 ## <p align="center">Installation</p>
 
