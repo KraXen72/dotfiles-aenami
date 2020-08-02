@@ -24,4 +24,4 @@ fetch_lyrics_for_current_song_in_background = yes
 main_window_color = white
 
 progressbar_look = "─╼ "
-progressbar_elapsed_color = "red"
+progressbar_elapsed_color = "yellow"
