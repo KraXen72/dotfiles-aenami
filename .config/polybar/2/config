@@ -1,0 +1,46 @@
+include-file = ~/.config/polybar/2/colors
+include-file = ~/.config/polybar/2/modules
+
+[bar/mybar]
+override-redirect = true
+wm-restack = bspwm
+bottom = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+fixed-center = true
+width = 80%
+height = 30
+radius = 0.0
+line-size = 2
+border-top-size = 2
+border-color = ${colors.color3}
+line-color = ${colors.color3}
+offset-y = 10
+offset-x = 10%
+padding = 2
+
+font-0 = scientifica:style=Regular:pixelsize=8;2
+font-1 = "Wuncon Siji:size=12;2"
+font-2 = "Font Awesome 5 Free Solid:style=solid:antialias=false:size=7;2"
+font-3 = "Font Awesome 5 Free:style=regular:antialias=false:size=7;2"
+font-4 = "Font Awesome 5 Brands:style=regular:antialias=false:size=7;2"
+
+modules-right =  memory backlight cpu battery alsa
+modules-center = bspwm
+modules-left =  date mpd
+; Position of the system tray window
+tray-position = left
+tray-maxsize = 15
+tray-background = ${colors.background}
+tray-offset-x = 0
+tray-offset-y = 0
+; Pad the sides of each tray icon
+tray-padding = 1
+
+[settings]
+label-focused-underline= ${colors.background}
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+kseudo-transparency = true
