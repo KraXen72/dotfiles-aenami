@@ -20,6 +20,10 @@ super + F1
     faint
 super + F2
     faint_light
+super + F3
+    blossom
+super + F4
+    blossom_light
 
 # brightness keybindings
 XF86MonBrightness{Up,Down}

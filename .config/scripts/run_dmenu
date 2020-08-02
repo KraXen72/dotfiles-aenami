@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export background=$(xrdb ~/.config/X11/xresources -query all | grep background | awk '{print $2}')
+export background=$(xrdb ~/.config/X11/xresources -query all | grep background: | awk '{print $2}')
 export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | awk '{print $2}')
 export color5=$(xrdb ~/.config/X11/xresources -query all | grep color5 | awk '{print $2}')
 

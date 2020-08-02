@@ -17,7 +17,21 @@ function rundunst
     run_dunst &
 }
 
+function shadows
+{
+    killall picom
+    picom --config ~/.config/picom/picom_shadows.conf &
+}
+
+function bspwmrc
+{
+    sed -i 's/config normal_border_color.*/config normal_border_color   "$bg"/' ~/.config/bspwm/bspwmrc
+    sed -i 's/config focused_border_color.*/config focused_border_color     "#74838c"/' ~/.config/bspwm/bspwmrc
+    bspc wm -r
+}
+
 colorscheme
 wall
 rundunst
-bspc wm -r
+shadows
+bspwmrc

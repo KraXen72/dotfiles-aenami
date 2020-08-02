@@ -7,4 +7,4 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar, using default config location ~/.config/polybar/config
-polybar mybar &
+polybar mybar --config="$HOME/.config/polybar/1/config" &

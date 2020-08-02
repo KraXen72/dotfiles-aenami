@@ -7,8 +7,8 @@
 + **TERMINAL**          : Urxvt
 + **SHELL**             : Zsh
 + **EDITOR**            : Vim
-+ **TERMINAL FONT**    : Neep
-+ **BAR FONT**         : Scientifica
++ **TERMINAL FONT**     : Neep
++ **BAR FONT**          : Scientifica
 + **ICON FONTS**        : Siji, Font Awesome
 + **MUSIC PLAYER**      : Mpd + Ncmpcpp
 + **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
@@ -43,12 +43,6 @@
 ![screenshot](/Pictures/Screenshots/scrot4.png)
 
 ## <p align="center">Installation</p>
-
-You can get this setup on any distro, but you need to install some apps which are required for this setup to work.\
-Make sure you have installed bspwm, sxhkd, polybar, urxvt, feh, zsh, git, dunst, font-awesome, siji. If you want you can look at [details](#details) and install other optional apps that I'm using.\
-I'm also using a bitmap font called neep in my terminal and scientifica in polybar. You can replace them in xresources and polybar config with the fonts that you use or you can get these fonts from [here](https://github.com/Tecate/bitmap-fonts).
-
-Now open your terminal and type these commands-
 
 ```shell
 mv ~/.config ~/.config-bak
