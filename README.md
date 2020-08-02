@@ -38,13 +38,9 @@
 
 ![screenshot](/Pictures/Screenshots/firefox.png)
 
-+ **Blossom Dark**
++ **Blossom**
 
-![screenshot](/Pictures/Screenshots/blossom_dark.png)
-
-+ **Blossom Light**
-
-![screenshot](/Pictures/Screenshots/blossom_light.png)
+![screenshot](/Pictures/Screenshots/blossom2.png)
 
 ## <p align="center">Installation</p>
 
