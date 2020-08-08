@@ -8,4 +8,5 @@ xbacklight -set 20%
 ~/.fehbg
 mpd &
 sxhkd &
-exec bspwm 
+redshift &
+exec bspwm
