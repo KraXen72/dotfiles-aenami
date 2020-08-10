@@ -52,5 +52,5 @@ source ~/.zshrc
 echo "Projects/dotfiles" >> .gitignore
 git clone --bare https://www.github.com/rajshekhar26/dotfiles $HOME/Projects/dotfiles
 config checkout
-dotfiles config --local status.showUntrackedFiles no
+config config --local status.showUntrackedFiles no
 ```

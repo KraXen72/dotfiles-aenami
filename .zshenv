@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # default programs
-export BROWSER="firefox-bin"
+export BROWSER="firefox"
 export TERMINAL="urxvt"
 export EDITOR="vim"
 export FMANAGER="ranger"

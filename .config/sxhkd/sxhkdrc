@@ -11,7 +11,7 @@ super + @space
 
 # apps
 super + shift + {b,f,m,v,t}
-    {firefox-bin,urxvt -e ranger,urxvt -e ncmpcpp,urxvt -e vim,urxvt -e rtorrent}
+    {firefox,urxvt -e ranger,urxvt -e ncmpcpp,urxvt -e vim,urxvt -e rtorrent}
 
 # scripts
 super + shift + r
