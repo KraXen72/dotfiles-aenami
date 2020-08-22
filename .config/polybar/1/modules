@@ -13,7 +13,7 @@ ws-icon-default = 
 label-empty-foreground = ${colors.color8}
 label-empty-background = ${colors.background}
 label-focused = %icon% %name%
-label-focused-underline = 2
+label-focused-underline = ${colors.color3}
 label-focused-padding = 2
 label-occupied = %icon%
 label-occupied-padding = 2
@@ -23,13 +23,14 @@ label-empty-padding = 2
 [module/date]
 type = internal/date
 
-date-alt = %d/%m/%Y
+date-alt = " %d/%m/%Y"
 time = %I:%M
-format = <label>
+format = <label>
 format-foreground = ${colors.color8}
 format-padding = 2
-label = %date% %time%
-label-foreground = ${colors.foreground}
+label = "  %date% %time%  "
+label-background = ${colors.color3}
+label-foreground = ${colors.background}
 
 [module/battery]
 type = internal/battery
@@ -158,7 +159,8 @@ type = internal/mpd
 
 format-online =   <label-song>
 label-song = %artist% - %title%
-label-offline =
-format-online-background = ${colors.primary}
-format-online-foreground = ${colors.fg2}
-format-online-padding = 2
+label-offline = ""
+label-song-maxlen = 35
+format-online-foreground = ${colors.color8}
+label-song-foreground = ${colors.foreground}
+format-online-padding = 1

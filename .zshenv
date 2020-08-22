@@ -6,6 +6,7 @@ export TERMINAL="urxvt"
 export EDITOR="vim"
 export FMANAGER="ranger"
 export READER="zathura"
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # default home directories
 export XDG_CONFIG_HOME="$HOME/.config"
