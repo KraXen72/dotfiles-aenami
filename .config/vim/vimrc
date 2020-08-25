@@ -89,6 +89,9 @@ nmap <leader>w :w!<cr>
 nmap <leader>q :wq!<cr>
 nmap <leader>qq :q!<cr>
 
+" ; == ;
+map ; :
+
 " shift key fixes
 cmap W w
 cmap WQ wq
@@ -97,6 +100,9 @@ cmap Q q
 
 " toggle undotree
 nmap <leader>u :UndotreeToggle<cr>
+
+" toggle teminal
+noremap <C-d> :sh<cr>
 
 " window navigation
 map <C-h> <C-w>h
