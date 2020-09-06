@@ -1,5 +1,4 @@
 set selection-clipboard clipboard
-set font "Neep 10"
 set recolor
 set page-padding 1
 set statusbar-v-padding 2

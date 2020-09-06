@@ -13,8 +13,9 @@ ws-icon-default = 
 label-empty-foreground = ${colors.color8}
 label-empty-background = ${colors.background}
 label-focused = %icon% %name%
-label-focused-underline = ${colors.color3}
-label-focused-padding = 2
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.color6}
+label-focused-padding = 3
 label-occupied = %icon%
 label-occupied-padding = 2
 label-empty = %icon%
@@ -25,12 +26,10 @@ type = internal/date
 
 date-alt = " %d/%m/%Y"
 time = %I:%M
-format = <label>
-format-foreground = ${colors.color8}
-format-padding = 2
-label = "  %date% %time%  "
-label-background = ${colors.color3}
-label-foreground = ${colors.background}
+format = <label>
+format-foreground = ${colors.color6}
+label =  %date% %time%
+label-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
@@ -70,16 +69,12 @@ label-charging-foreground = ${colors.foreground}
 label-discharging-foreground = ${colors.foreground}
 label-full-foreground = ${colors.foreground}
 
-format-charging-foreground = ${colors.color8}
+format-charging-foreground = ${colors.color2}
 format-charging-background = ${colors.background}
 format-discharging-background = ${colors.background}
 format-full-background = ${colors.background}
-format-discharging-foreground = ${colors.color8}
-format-full-foreground = ${colors.color8}
-
-format-charging-padding = 1
-format-discharging-padding = 1
-format-full-padding = 1
+format-discharging-foreground = ${colors.color1}
+format-full-foreground = ${colors.color3}
 
 [module/network]
 type = internal/network
@@ -90,7 +85,6 @@ accumulate-stats = true
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
-format-connected-padding = 1
 format-connected-foreground = ${colors.color8}
 label-connected-foreground = ${colors.foreground}
 
@@ -104,22 +98,20 @@ ramp-signal-4 = 
 type = internal/alsa
 
 format-volume = <ramp-volume> <label-volume>
-format-muted-prefix = " "
+format-muted-prefix = 
 label-muted = " Muted"
-format-muted-padding = 1
 format-muted-background = ${colors.background}
 label-muted-foreground = ${colors.foreground}
-format-muted-foreground = ${colors.color8}
+format-muted-foreground = ${colors.color4}
 format-volume-background = ${colors.background}
 label-volume-foreground = ${colors.foreground}
-format-volume-foreground = ${colors.color8}
-format-volume-padding = 1
+format-volume-foreground = ${colors.color4}
 
-ramp-volume-0 = " "
-ramp-volume-1 = " "
-ramp-volume-2 = " "
-ramp-volume-3 = " "
-ramp-volume-4 = " "
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
 
 [module/backlight]
 type = internal/backlight
@@ -127,8 +119,7 @@ type = internal/backlight
 card = intel_backlight
 enable-scroll = true
 format =  <label>
-format-padding = 1
-format-foreground = ${colors.color8}
+format-foreground = ${colors.color6}
 format-background = ${colors.background}
 label-foreground = ${colors.foreground}
 label = %percentage%%
@@ -137,9 +128,8 @@ label = %percentage%%
 type = internal/cpu
 
 format =  <label>
-format-foreground = ${colors.color8}
+format-foreground = ${colors.color2}
 format-background = ${colors.background}
-format-padding = 2
 label = %percentage%%
 label-foreground = ${colors.foreground}
 
@@ -149,10 +139,9 @@ interval = 3
 
 format =  <label>
 label = %percentage_used%%
-format-foreground = ${colors.color8}
+format-foreground = ${colors.color5}
 format-background = ${colors.background}
 label-foreground = ${colors.foreground}
-format-padding = 2
 
 [module/mpd]
 type = internal/mpd
@@ -161,6 +150,5 @@ format-online =   <label-song>
 label-song = %artist% - %title%
 label-offline = ""
 label-song-maxlen = 35
-format-online-foreground = ${colors.color8}
 label-song-foreground = ${colors.foreground}
-format-online-padding = 1
+format-online-foreground = ${colors.color5}

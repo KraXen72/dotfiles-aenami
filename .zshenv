@@ -20,3 +20,4 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XAUTHORITY="$HOME/.config/X11/xauthority"
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export LESSHISTFILE=-
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc

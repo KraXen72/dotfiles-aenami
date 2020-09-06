@@ -1,6 +1,5 @@
-syntax on   " syntax highlighting
+syntax enable   " syntax highlighting
 set wildmenu    " autocompletion for commandmenu
-set number  " line number
 set tabstop=4 " four spaces tab
 set expandtab   " convert tabs to spaces
 set shiftwidth=4    " indents of four spaces
@@ -10,9 +9,9 @@ set mouse=a " enable use of the mouse
 set showmode!   " hide current mode
 set showmatch   " highlight matching brackets
 set t_Co=16 " terminal color
-set background=light
 set incsearch " search as characters are entered
 set ignorecase  " case insensitive search
+set nohlsearch " turn off search highlights
 set smartcase   " case sensitive when uppercase
 set laststatus=2    " Always display the status line
 set noswapfile  " swap files won't be created
@@ -20,32 +19,40 @@ set nobackup    " no backup
 set undofile
 set autoindent
 set smartindent
-"set cursorline  "highlight current line
+set hidden
+set encoding=utf-8
+set bg=light
+set splitbelow splitright
 let mapleader = " " " space is the leader key
-
-" remove search results
-command! H let @/=""
 
 " disble automatic comments on new line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" line numbers color
-highlight LineNr ctermfg=cyan
+" line numbers
+set nu
+set cursorline
+hi LineNr ctermfg=cyan
+hi CursorLine cterm=NONE
+hi CursorLineNr ctermbg=yellow ctermfg=black cterm=NONE
 
 " remove all whitespace and newlines at end of file on save
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritepre * %s/\n\+\%$//e
+
+" screen line movement
+noremap j gj
+noremap k gk
 
 " xdg base dir
 set undodir=$XDG_DATA_HOME/vim/undo
 set directory=$XDG_DATA_HOME/vim/swap
 set backupdir=$XDG_DATA_HOME/vim/backup
 set viewdir=$XDG_DATA_HOME/vim/view
-set viminfo+=n$XDG_DATA_HOME/vim/viminfo
+set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
 set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
 
 " statusline
-hi User1 ctermfg=black ctermbg=green
+hi User1 ctermfg=black ctermbg=red
 hi User2 ctermfg=black ctermbg=blue
 hi User3 ctermfg=black ctermbg=magenta
 hi User4 ctermfg=black ctermbg=yellow
@@ -56,7 +63,7 @@ let g:currentmode={
     \ 'n'  : 'NORMAL ',
     \ 'v'  : 'VISUAL ',
     \ 'V'  : 'V·Line ',
-    \ '' : 'V·Block ',
+    \ '^V' : 'V·Block ',
     \ 'i'  : 'INSERT ',
     \ 'R'  : 'R ',
     \ 'Rv' : 'V·Replace ',
@@ -64,7 +71,7 @@ let g:currentmode={
     \}
 
 set statusline=
-set statusline+=%4*\ %4*%{toupper(g:currentmode[mode()])}
+set statusline+=%2*\ %2*%{toupper(g:currentmode[mode()])}
 set statusline+=%6*\ %f
 set statusline+=\ %6*\ %{&modified?'[+]':''}
 set statusline+=\ %=%6*\ %Y
@@ -81,7 +88,7 @@ inoremap < <><left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-" espace using hh
+" hh == esc
 inoremap hh <esc>
 
 " save and quit
@@ -89,7 +96,7 @@ nmap <leader>w :w!<cr>
 nmap <leader>q :wq!<cr>
 nmap <leader>qq :q!<cr>
 
-" ; == ;
+" ; == :
 map ; :
 
 " shift key fixes
@@ -98,11 +105,14 @@ cmap WQ wq
 cmap wQ wq
 cmap Q q
 
-" toggle undotree
-nmap <leader>u :UndotreeToggle<cr>
+" Reload Vim config
+noremap <Leader>r :source ~/.config/vim/vimrc<CR>
 
 " toggle teminal
 noremap <C-d> :sh<cr>
+
+" toggle undotree
+nmap <leader>u :UndotreeToggle<cr>
 
 " window navigation
 map <C-h> <C-w>h
@@ -119,11 +129,38 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeShowHidden=1
 
+" CoC autocompletion
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" CoC GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" CoC extentions
+let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-css', 'coc-json', 'coc-vimlsp']
+
+" CoC symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
+
 " plugins
 call plug#begin('~/.config/vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'mbbill/undotree'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot'
+Plug 'honza/vim-snippets'
+Plug 'kovetskiy/sxhkd-vim'
 call plug#end()

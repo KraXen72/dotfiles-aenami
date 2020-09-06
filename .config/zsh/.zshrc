@@ -36,7 +36,7 @@ autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 
 # prompt
-PROMPT='%~ >> '
+PROMPT='%F{blue}[%~]%f '
 setopt prompt_subst
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }

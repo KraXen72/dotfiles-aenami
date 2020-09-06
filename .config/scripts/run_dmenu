@@ -4,4 +4,4 @@ export background=$(xrdb ~/.config/X11/xresources -query all | grep background: 
 export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | awk '{print $2}')
 export color5=$(xrdb ~/.config/X11/xresources -query all | grep color5 | awk '{print $2}')
 
-dmenu_run -fn "jmk Neep" -nb "$background" -nf "$foreground" -sb "$color5" -sf "$background"
+dmenu_run -fn "UbuntuMono Nerd Font" -nb "$background" -nf "$foreground" -sb "$color5" -sf "$background"

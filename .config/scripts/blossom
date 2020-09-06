@@ -8,7 +8,7 @@ function colorscheme
 
 function wall
 {
-    feh --bg-fill ~/Pictures/blossom2.*
+    feh --bg-fill ~/Pictures/blossom3.*
 }
 
 function rundunst
@@ -20,7 +20,7 @@ function rundunst
 function compositor
 {
     killall picom
-    picom --config ~/.config/picom/picom_rounded_corners.conf &
+    picom --config ~/.config/picom/picom.conf &
 }
 
 function bspwmrc
