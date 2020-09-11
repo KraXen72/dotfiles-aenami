@@ -5,7 +5,7 @@
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
 + **TERMINAL**          : [St](https://github.com/rajshekhar26/st)
-+ **SHELL**             : Fish (interactive)
++ **SHELL**             : Fish (interactive), bash (login)
 + **EDITOR**            : Neovim
 + **TERMINAL FONT**     : Cozette
 + **BAR FONT**          : Terminus
@@ -38,6 +38,8 @@
 
 ![screenshot](/Pictures/Screenshots/blossom2.png)
 
+![screenshot](/Pictures/Screenshots/blossom3.jpg)
+
 + **Firefox**
 
 ![screenshot](/Pictures/Screenshots/firefox.png)
@@ -55,7 +57,7 @@ config checkout
 config config --local status.showUntrackedFiles no
 ```
 
-#### Set Wallpaper using feh (optional)
+#### Set wallpaper using feh (optional)
 ```shell
  feh --bg-fill ~/Pictures/blossom3.jpg
 ```
