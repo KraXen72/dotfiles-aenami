@@ -1,5 +1,5 @@
-include-file = ~/.config/polybar/1/colors
-include-file = ~/.config/polybar/1/modules
+include-file = ~/.config/polybar/colors
+include-file = ~/.config/polybar/modules
 
 [bar/mybar]
 override-redirect = true
@@ -9,7 +9,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 fixed-center = true
 width = 100%
-height = 22
+height = 24
 radius = 0.0
 line-size = 2
 border-bottom-size = 3
@@ -21,7 +21,7 @@ offset-x = 0
 padding = 2
 module-margin = 2
 
-font-0 = xos4 Terminus:style=Regular:pixelsize=8;2
+font-0 = xos4 Terminus:pixelsize=8;2
 font-1 = "Wuncon Siji:size=12;2"
 font-2 = "Font Awesome 5 Free Solid:style=solid:antialias=false:size=7;2"
 font-3 = "Font Awesome 5 Free:style=regular:antialias=false:size=7;2"

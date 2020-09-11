@@ -31,6 +31,5 @@ def_key "h"
 def_key "tab"
     next_screen
 
-def_key "7"
+def_key "l"
     show_lyrics
-

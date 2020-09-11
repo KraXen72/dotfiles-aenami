@@ -4,17 +4,17 @@
 + **WM**                : Bspwm
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
-+ **TERMINAL**          : Urxvt
-+ **SHELL**             : Zsh
-+ **EDITOR**            : Vim
-+ **TERMINAL FONT**     : Neep
-+ **BAR FONT**          : Scientifica
++ **TERMINAL**          : [St](https://github.com/rajshekhar26/st)
++ **SHELL**             : Fish (interactive)
++ **EDITOR**            : Neovim
++ **TERMINAL FONT**     : Cozette
++ **BAR FONT**          : Terminus
 + **ICON FONTS**        : Siji, Font Awesome
 + **MUSIC PLAYER**      : Mpd + Ncmpcpp
 + **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
 + **FILE MANAGER**      : Ranger
 + **NOTIFICATION**      : Dunst
-+ **COMPOSITOR**        : Picom-ibhagwan
++ **COMPOSITOR**        : [Picom)](https://github.com/ibhagwan/picom)
 + **EMAIL**             : Neomutt
 + **VIDEO PLAYER**      : Mpv
 + **SYSTEM MONITOR**    : Htop
@@ -26,17 +26,11 @@
 
 ## <p align="center">Preview</p>
 
-+ **Faint Light**
++ **Faint**
 
 ![screenshot](/Pictures/Screenshots/faint_light.png)
 
-+ **Faint Dark**
-
 ![screenshot](/Pictures/Screenshots/faint_dark.png)
-
-+ **Firefox**
-
-![screenshot](/Pictures/Screenshots/firefox.png)
 
 + **Blossom**
 
@@ -44,13 +38,17 @@
 
 ![screenshot](/Pictures/Screenshots/blossom2.png)
 
++ **Firefox**
+
+![screenshot](/Pictures/Screenshots/firefox.png)
+
 ## <p align="center">Installation</p>
 
 ```shell
 mv ~/.config ~/.config-bak
-mkdir -p .config/ Projects/ Pictures/Screenshots/
-echo 'alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"' >> $HOME/.zshrc
-source ~/.zshrc
+mkdir -p ~/.config/ ~/Projects/ ~/Pictures/Screenshots/
+echo 'alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"' >> $HOME/.bashrc
+source ~/.bashrc
 echo "Projects/dotfiles" >> .gitignore
 git clone --bare https://www.github.com/rajshekhar26/dotfiles $HOME/Projects/dotfiles
 config checkout

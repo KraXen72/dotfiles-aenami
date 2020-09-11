@@ -1,16 +1,17 @@
 ncmpcpp_directory = ~/.config/ncmpcpp
 lyrics_directory = ~/.local/share/ncmpcpp/lyrics
 mpd_music_dir = ~/Music
+
 visualizer_type = "spectrum"
 visualizer_look = "∙│"
 visualizer_color = blue
 
 song_list_format = "{{%a  %t}|{%f}}{$R%l}"
 current_item_prefix = $(blue)$r
-
 current_item_inactive_column_prefix = $(white)$r
 now_playing_prefix = "$5"
 now_playing_suffix = "$9"
+main_window_color = white
 execute_on_song_change = notify-send "Now Playing" "$(mpc current)"
 
 playlist_display_mode = "classic"
@@ -21,7 +22,7 @@ titles_visibility = "no"
 
 follow_now_playing_lyrics = yes
 fetch_lyrics_for_current_song_in_background = yes
-main_window_color = white
 
-progressbar_look = "─╼ "
-progressbar_elapsed_color = "magenta"
+#progressbar_look = "─╼ "
+progressbar_look = "▂▂ "
+progressbar_elapsed_color = "black"

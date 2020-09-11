@@ -1,29 +1,26 @@
-#! /bin/sh
-# wm independent hotkeys
-#
-# terminal emulator
+#!/bin/sh
+
+# terminal
 super + Return
-	urxvt
+	$TERMINAL
 
 # program launcher
 super + @space
     run_dmenu
 
-# apps
-super + shift + {b,f,m,v,t}
-    {firefox,urxvt -e ranger,urxvt -e ncmpcpp,urxvt -e vim,urxvt -e rtorrent}
+# programs
+super + shift + {b,f,v,m,t}
+    {\
+	$BROWSER,\
+    $TERMINAL -e $FMANAGER,\
+    $TERMINAL -e $EDITOR,\
+    $TERMINAL -e ncmpcpp,\
+    $TERMINAL -e rtorrent
+\}
 
 # scripts
 super + shift + r
     redshift_toggle
-super + F1
-    faint
-super + F2
-    faint_light
-super + F3
-    blossom
-super + F4
-    blossom_light
 
 # brightness keybindings
 XF86MonBrightness{Up,Down}
@@ -35,16 +32,18 @@ XF86Audio{Next,Prev,Play,Stop}
 
 # volume
 XF86AudioRaiseVolume
-    volume_increase
+    amixer sset -q Master 5%+
+
 XF86AudioLowerVolume
-    volume_decrease
+    amixer sset -q Master 5%-
 
 XF86AudioMute
     amixer -q sset Master toggle
 
 # screenshot keybindings
 Print
-    scrot '/home/raj/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png' && notify-send "Screenshot captured"
+    scrot "$HOME/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png" && \
+	notify-send "Screenshot captured"
 ctrl + Print
     scrot -C
 
@@ -60,7 +59,7 @@ super + Escape
 super + alt  + g
     bspc config window_gap 0
 super + shift + g
-    bspc config window_gap 12
+    bspc config window_gap 8
 
 # quit/restart bspwm
 super + alt + {q,r}

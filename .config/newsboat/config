@@ -29,7 +29,7 @@ bind-key U show-urls
 external-url-viewer "urlview"
 browser firefox-bin
 macro f open-in-browser
-macro y set browser "mpv" ; open-in-browser ; set browser firefox-bin
+macro y set browser "mpv" ; open-in-browser ; set browser firefox
 
 highlight article "^(Feed|Author|Link):.*$" color4 color0
 highlight article "^(Title|Date):.*$" color6 color0 bold

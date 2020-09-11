@@ -14,7 +14,7 @@ label-empty-foreground = ${colors.color8}
 label-empty-background = ${colors.background}
 label-focused = %icon% %name%
 label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.color6}
+label-focused-background = ${colors.color12}
 label-focused-padding = 3
 label-occupied = %icon%
 label-occupied-padding = 2
@@ -27,7 +27,7 @@ type = internal/date
 date-alt = " %d/%m/%Y"
 time = %I:%M
 format = <label>
-format-foreground = ${colors.color6}
+format-foreground = ${colors.color8}
 label =  %date% %time%
 label-foreground = ${colors.foreground}
 
@@ -69,12 +69,12 @@ label-charging-foreground = ${colors.foreground}
 label-discharging-foreground = ${colors.foreground}
 label-full-foreground = ${colors.foreground}
 
-format-charging-foreground = ${colors.color2}
+format-charging-foreground = ${colors.color8}
 format-charging-background = ${colors.background}
 format-discharging-background = ${colors.background}
 format-full-background = ${colors.background}
-format-discharging-foreground = ${colors.color1}
-format-full-foreground = ${colors.color3}
+format-discharging-foreground = ${colors.color8}
+format-full-foreground = ${colors.color8}
 
 [module/network]
 type = internal/network
@@ -102,10 +102,10 @@ format-muted-prefix = 
 label-muted = " Muted"
 format-muted-background = ${colors.background}
 label-muted-foreground = ${colors.foreground}
-format-muted-foreground = ${colors.color4}
+format-muted-foreground = ${colors.color8}
 format-volume-background = ${colors.background}
 label-volume-foreground = ${colors.foreground}
-format-volume-foreground = ${colors.color4}
+format-volume-foreground = ${colors.color8}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -119,7 +119,7 @@ type = internal/backlight
 card = intel_backlight
 enable-scroll = true
 format =  <label>
-format-foreground = ${colors.color6}
+format-foreground = ${colors.color8}
 format-background = ${colors.background}
 label-foreground = ${colors.foreground}
 label = %percentage%%
@@ -128,7 +128,7 @@ label = %percentage%%
 type = internal/cpu
 
 format =  <label>
-format-foreground = ${colors.color2}
+format-foreground = ${colors.color8}
 format-background = ${colors.background}
 label = %percentage%%
 label-foreground = ${colors.foreground}
@@ -139,7 +139,7 @@ interval = 3
 
 format =  <label>
 label = %percentage_used%%
-format-foreground = ${colors.color5}
+format-foreground = ${colors.color8}
 format-background = ${colors.background}
 label-foreground = ${colors.foreground}
 
@@ -151,4 +151,4 @@ label-song = %artist% - %title%
 label-offline = ""
 label-song-maxlen = 35
 label-song-foreground = ${colors.foreground}
-format-online-foreground = ${colors.color5}
+format-online-foreground = ${colors.color8}

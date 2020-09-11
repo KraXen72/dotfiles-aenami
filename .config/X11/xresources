@@ -2,13 +2,20 @@
 
 #include </home/raj/.config/colorschemes/blossom>
 
-! URxvt
+! terminal
 
-URxvt.scrollBar: false
-URxvt.internalBorder: 24
+*.scrollBar: false
+*.internalBorder: 24
+
 URxvt.cursorUnderline: true
 URxvt.geometry: 70x20
-URxvt.letterSpace: -1
+URxvt.font: xft: Cozette
+URxvt.boldFont: xft: Cozette
 
-URxvt*font: xft: UbuntuMono Nerd Font:size=11:antialias=true:hinting:true
-URxvt*boldFont: xft: UbuntuMono Nerd Font:size=11:antialias=true:hinting:true
+XTerm*faceName: Cozette
+
+st.font:			Cozette
+st.shell:			/bin/sh
+st.chscale:			1.0
+st.cwscale:			0.8
+st.borderpx:		24

@@ -1,9 +1,9 @@
-#!/bin/zsh
+#!/bin/sh
 
 # default programs
+export EDITOR="nvim"
 export BROWSER="firefox"
-export TERMINAL="urxvt"
-export EDITOR="vim"
+export TERMINAL="st"
 export FMANAGER="ranger"
 export READER="zathura"
 
@@ -11,13 +11,17 @@ export READER="zathura"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+export PATH=$PATH:$HOME/.local/bin
 
 # clean home
-export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
-export ZDOTDIR="$HOME/.config/zsh"
-export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
-export XAUTHORITY="$HOME/.config/X11/xauthority"
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export LESSHISTFILE=-
-export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export XAUTHORITY="$HOME/.config/X11/xauthority"
+
+# run bashrc
+if [[ -f ~/.bashrc ]] ; then
+        . ~/.bashrc
+fi
