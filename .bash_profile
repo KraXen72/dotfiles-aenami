@@ -3,9 +3,19 @@
 # default programs
 export EDITOR="nvim"
 export BROWSER="firefox"
-export TERMINAL="st"
 export FMANAGER="ranger"
 export READER="zathura"
+
+if command -v urxvt &> /dev/null
+then
+        export TERMINAL="urxvt"
+elif command -v xterm &> /dev/null
+then
+        export TERMINAL="xterm"
+elif command -v st &> /dev/null
+then
+        export TERMINAL="st"
+fi
 
 # default home directories
 export XDG_CONFIG_HOME="$HOME/.config"

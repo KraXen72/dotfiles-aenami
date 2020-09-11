@@ -48,6 +48,7 @@
 
 ```shell
 mv ~/.config ~/.config-bak
+mv ~/.bash_profile ~/.bash_profile-bak
 mkdir -p ~/.config/ ~/Projects/ ~/Pictures/Screenshots/
 echo 'alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"' >> $HOME/.bashrc
 source ~/.bashrc
@@ -59,5 +60,5 @@ config config --local status.showUntrackedFiles no
 
 #### Set wallpaper using feh (optional)
 ```shell
- feh --bg-fill ~/Pictures/blossom3.jpg
+feh --bg-fill ~/Pictures/blossom3.jpg
 ```
