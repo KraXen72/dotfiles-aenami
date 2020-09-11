@@ -54,3 +54,8 @@ git clone --bare https://www.github.com/rajshekhar26/dotfiles $HOME/Projects/dot
 config checkout
 config config --local status.showUntrackedFiles no
 ```
+
+#### Set Wallpaper using feh (optional)
+```shell
+ feh --bg-fill ~/Pictures/blossom3.jpg
+```
