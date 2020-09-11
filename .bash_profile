@@ -6,15 +6,15 @@ export BROWSER="firefox"
 export FMANAGER="ranger"
 export READER="zathura"
 
-if command -v urxvt &> /dev/null
+if command -v st &> /dev/null
+then
+        export TERMINAL="st"
+elif command -v urxvt &> /dev/null
 then
         export TERMINAL="urxvt"
 elif command -v xterm &> /dev/null
 then
         export TERMINAL="xterm"
-elif command -v st &> /dev/null
-then
-        export TERMINAL="st"
 fi
 
 # default home directories
