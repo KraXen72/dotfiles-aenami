@@ -9,8 +9,8 @@
 *.color8:       #5E6B72
 
 ! red
-*.color1:       #EF4B4B
-*.color9:       #FF6565
+*.color1:       #FF6565
+*.color9:       #FF7272
 
 ! green
 *.color2:       #2CC46E

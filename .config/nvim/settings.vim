@@ -21,23 +21,10 @@ au BufEnter * set fo-=c fo-=r fo-=o " disable new line comments
 
 " search highlights
 set hlsearch
-hi Search ctermbg=black ctermfg=white cterm=NONE
-
-" remove bold font
-hi StatusLine cterm=NONE,reverse
-hi Identifier cterm=NONE
-
-" popup menu
-hi Pmenu ctermbg=black ctermfg=white
-hi PmenuSel ctermbg=cyan ctermfg=black
 
 " lines and line numbers
 set nu relativenumber
 set cursorline
-hi LineNr ctermfg=cyan
-hi CursorLine cterm=NONE ctermbg=black
-hi CursorLineNr ctermbg=NONE ctermfg=yellow cterm=NONE
-
 
 " remove all whitespace and newlines at end of file on save
 au BufWritePre * %s/\s\+$//e
