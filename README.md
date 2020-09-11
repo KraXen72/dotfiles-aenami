@@ -38,7 +38,7 @@
 
 ![screenshot](/Pictures/Screenshots/blossom2.png)
 
-![screenshot](/Pictures/Screenshots/blossom3.jpg)
+![screenshot](/Pictures/Screenshots/blossom3.png)
 
 + **Firefox**
 
