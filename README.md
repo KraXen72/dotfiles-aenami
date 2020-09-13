@@ -39,7 +39,7 @@ mv ~/.config ~/.config-bak
 mv ~/.bash_profile ~/.bash_profile-bak
 mkdir -p ~/.config/ ~/Projects/ ~/Pictures/Screenshots/
 echo 'alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"' >> $HOME/.bashrc
-source ~/.bashrc && rm .bashrc
+source ~/.bashrc && mv ~/.bashrc ~/.bashrc-bak
 echo "Projects/dotfiles" >> .gitignore
 git clone --bare https://www.github.com/rajshekhar26/dotfiles $HOME/Projects/dotfiles
 config checkout
