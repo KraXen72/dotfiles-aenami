@@ -23,7 +23,7 @@ au BufEnter * set fo-=c fo-=r fo-=o " disable new line comments
 set hlsearch
 
 " lines and line numbers
-set nu relativenumber
+set nu rnu
 set cursorline
 
 " remove all whitespace and newlines at end of file on save

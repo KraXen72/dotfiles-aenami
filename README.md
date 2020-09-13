@@ -4,13 +4,13 @@
 + **WM**                : Bspwm
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
-+ **TERMINAL**          : [St](https://github.com/rajshekhar26/st)
++ **TERMINAL**          : [St](https://github.com/rajshekhar26/st) (with xresources colors patch)
 + **SHELL**             : Fish (interactive), bash (login)
 + **EDITOR**            : Neovim
 + **TERMINAL FONT**     : Cozette
 + **BAR FONT**          : Terminus
 + **ICON FONTS**        : Siji, Font Awesome
-+ **MUSIC PLAYER**      : Mpd + Ncmpcpp
++ **MUSIC PLAYER**      : Mpd, Ncmpcpp
 + **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
 + **FILE MANAGER**      : Ranger
 + **NOTIFICATION**      : Dunst
@@ -26,23 +26,11 @@
 
 ## <p align="center">Preview</p>
 
-+ **Faint**
-
-![screenshot](/Pictures/Screenshots/faint_light.png)
-
-![screenshot](/Pictures/Screenshots/faint_dark.png)
-
-+ **Blossom**
-
 ![screenshot](/Pictures/Screenshots/blossom1.png)
 
 ![screenshot](/Pictures/Screenshots/blossom2.png)
 
 ![screenshot](/Pictures/Screenshots/blossom3.png)
-
-+ **Firefox**
-
-![screenshot](/Pictures/Screenshots/firefox.png)
 
 ## <p align="center">Installation</p>
 
@@ -56,9 +44,4 @@ echo "Projects/dotfiles" >> .gitignore
 git clone --bare https://www.github.com/rajshekhar26/dotfiles $HOME/Projects/dotfiles
 config checkout
 config config --local status.showUntrackedFiles no
-```
-
-#### Set wallpaper using feh (optional)
-```shell
-feh --bg-fill ~/Pictures/blossom3.jpg
 ```

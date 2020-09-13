@@ -9,6 +9,7 @@ super + @space
     run_dmenu
 
 # programs
+# variables in .bash_profile
 super + shift + {b,f,v,m,t}
     {\
 	$BROWSER,\

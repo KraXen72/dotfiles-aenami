@@ -1,11 +1,11 @@
 ! Colorscheme
 
-#include </home/raj/.config/colorschemes/blossom>
+#include "colorschemes/blossom"
 
 ! terminal
 
 *.scrollBar: false
-*.internalBorder: 24
+*.internalBorder: 20
 
 URxvt.cursorUnderline: true
 URxvt.geometry: 70x20

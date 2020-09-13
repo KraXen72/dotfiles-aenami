@@ -1,8 +1,7 @@
 function fish_prompt
 
-   echo (set_color brblue) (prompt_pwd) \
-   (set_color green)'❯'(set_color red)'❯'\
-(set_color yellow)'❯' (set_color normal)
+   echo (set_color blue) (prompt_pwd)\
+   (set_color yellow)'❯❯❯' (set_color normal)
 end
 
 function fish_right_prompt

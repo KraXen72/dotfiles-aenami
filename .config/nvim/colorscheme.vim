@@ -2,7 +2,7 @@ syntax enable
 hi Function ctermfg=4
 hi Statement ctermfg=3
 hi Type ctermfg=6
-hi Comment ctermfg=5
+hi Comment ctermfg=4
 hi Boolean ctermfg=2
 hi PreProc ctermfg=4
 hi Visual ctermbg=0
@@ -19,6 +19,6 @@ hi Pmenu ctermbg=0 ctermfg=7
 hi PmenuSel ctermbg=14 ctermfg=0
 
 " line numbers
-hi LineNr ctermfg=6
+hi LineNr ctermfg=4
 hi CursorLine cterm=NONE ctermbg=0
-hi CursorLineNr ctermbg=NONE ctermfg=3 cterm=NONE
+hi CursorLineNr ctermbg=NONE ctermfg=5 cterm=NONE
